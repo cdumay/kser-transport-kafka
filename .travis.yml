@@ -1,0 +1,15 @@
+language: python
+python:
+- 3.5
+install:
+- pip --version
+script:
+- python setup.py build
+deploy:
+  provider: pypi
+  user: cdumay
+  on:
+    tags: true
+    repo: cdumay/kser-transport-kafka
+  password:
+    secure: 0gSRMkyp9kHcA57nXzp6Ot6xY2DXpGGW7f3fn2A3Bg6xpX9ZDR3Lf9ikFrbXfNrDKOBgKK6PicLI+8Hnr5mWdvK06U4/RmE6L+D7f12pCYJ7dDDcKlCoWO+WtxofAJEbWoCDPvfoYK7yDJJ7PqxDl/v3EYeaRDp62ofC0iBpR00UxVaWG9x3oM6jYLv36FOdRoGCnZla1+j8MQvnr9iGXO6m+1JeN9RT2//Y9h6PIrdVoN2wnNr9ELoCGE61Sg+p+gOPJL/AKGcH4jORk+tXZfCnWf/lDc1wqEVSlzpFgXcsHqQgZDfNi9zVslHqA75KuyZ8xtsYyYTb0V3CAszXO0ta2mYektYeEmrwifENqt1I83mLL749LtKaRu7/hdWC0Y9kgXM7+BhuKIMktbzmRVKf9Iz9uC4bKKKViWyPDDBOJdpfFwc6YS5kiDsjcz7syQNWpFopZwp+Cv+kL2cko28Nqh5+NP39TSr73mGmztknNngfMOP6fugCHUO/NbR3I3bO6YQPAgnAPSCc23iLCzbf9P2o8ZelXjrVZZY9LTgeU3TgYyJSa3MYW8ANEtASF/MEbHf4SCjoS3AqhQOjgpG+d7BcnUM5nX6t4Gwso61WlMUwuV59Uhv4dEGekWTZ9g4430nY9XBJWHmTfpm0rOPF1D6JQ98Qn3dlawfG2wA=
