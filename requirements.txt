@@ -1,2 +1,3 @@
+cdumay-result>=0.1.3
 confluent-kafka
-kser
+kser>=0.6
