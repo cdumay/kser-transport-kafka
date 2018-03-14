@@ -6,6 +6,8 @@
 
 
 """
+# noinspection PyProtectedMember
+# noinspection PyUnresolvedReferences
 from confluent_kafka import Producer as KafkaProducer
 from cdumay_result import Result
 from kser.controller import BaseController
@@ -40,12 +42,13 @@ class Producer(BaseController):
         except Exception as exc:
             return Result.from_exception(exc)
 
+    # noinspection PyUnusedLocal
     def send(self, topic, kmsg, timeout=60):
         """ Send the message into the given topic
 
         :param str topic: a kafka topic
         :param ksr.transport.Message kmsg: Message to serialize
-        :param int timeout: Timeout in seconds
+        :param int timeout: Timeout in seconds (not used in proto producer)
         :return: Execution result
         :rtype: kser.result.Result
         """
